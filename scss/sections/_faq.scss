@@ -1,0 +1,19 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.faq-p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.accordion-item {
+  -webkit-box-shadow: -1px 9px 27px -11px rgba(black, 0.3);
+  -moz-box-shadow: -1px 9px 27px -11px rgba(black, 0.3);
+  box-shadow: -1px 9px 27px -11px rgba(black, 0.3);
+}
+
+.accordion-item:hover {
+  -webkit-box-shadow: -1px 9px 27px -11px rgba($primary, 0.9);
+  -moz-box-shadow: -1px 9px 27px -11px rgba($primary, 0.9);
+  box-shadow: -1px 9px 27px -11px rgba($primary, 0.9);
+}

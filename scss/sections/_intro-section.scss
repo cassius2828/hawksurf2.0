@@ -1,0 +1,414 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.intro-section {
+  @include gradient;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+  font-family: Goblin + One;
+}
+
+@media (min-width: 767px) {
+  .intro-section {
+    padding: 10rem 0 0 0;
+  }
+}
+
+// image of man coding
+
+.man-coding {
+  width: 350px;
+}
+
+@media (max-width: 385px) {
+  .man-coding {
+    left: 0;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .man-coding {
+    top: -19rem;
+  }
+}
+
+@media (min-width: 1270px) {
+  .man-coding {
+    left: -8rem;
+    position: relative;
+    top: 10rem;
+    transform: scale(1.5);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .man-coding {
+    transform: scale(1.25);
+  }
+}
+
+@media (min-width: 2000px) {
+  .man-coding {
+    left: 0;
+    position: relative;
+    top: 13rem;
+    left: 6rem;
+    transform: scale(2.5);
+  }
+}
+
+// Changes in play button via media queries below
+
+.intros {
+  .video-box {
+    position: relative;
+    a {
+      top: 8.5rem;
+      left: 9.9rem;
+      position: absolute;
+      span {
+        i {
+          font-size: 5rem;
+          color: rgba($white, 0.7);
+          @include gradient;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 373px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 7rem;
+        left: 6.55rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 374px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9rem;
+        left: 8.5rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 389px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9rem;
+        left: 8.9rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 415px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9.75rem;
+        left: 10.8rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 437px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9.75rem;
+        left: 11.8rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 468px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9.75rem;
+        left: 13.8rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 516px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9.75rem;
+        left: 16.8rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 8.75rem;
+        left: 8.35rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 999px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9.5rem;
+        left: 15.85rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9.5rem;
+        left: 15.15rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1269px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 9rem;
+        left: 21.43rem;
+        position: absolute;
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1270px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 20rem;
+        left: 13.2rem;
+        position: absolute;
+        transform: scale(1.5);
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 19.5rem;
+        left: 18.7rem;
+        position: absolute;
+        transform: scale(1.5);
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .intros {
+    .video-box {
+      position: relative;
+      a {
+        top: 22rem;
+        left: 33.25rem;
+        position: absolute;
+        transform: scale(2.5);
+        span {
+          i {
+            font-size: 5rem;
+            color: rgba($white, 0.7);
+            @include gradient;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ^ Changes in play button via media queries above ^
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  border: 0.55rem solid $white;
+  border-radius: 50%;
+  animation: pulse-border 1.5s linear infinite;
+
+  &--border-1 {
+    animation: 1s;
+  }
+  &--border-2 {
+    animation-delay: 1.5s;
+  }
+}
+
+// wave at bottom of intro
+
+#wave {
+  margin: 0;
+  transform: scale(1.1);
+}
+
+// arrow in get in touch
+
+@media (min-width: 2500px) {
+  .fa-arrow-right {
+    position: relative;
+    top: -7px;
+  }
+}

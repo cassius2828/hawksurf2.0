@@ -1,0 +1,54 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.get-started {
+  padding: 1rem 0 0 0;
+  background-color: $gray-200;
+}
+
+.cta-info {
+  padding: 3rem;
+  margin: 1rem 0;
+}
+.cta-info ul {
+  list-style: none;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.7rem;
+
+  li::before {
+    font-family: "Font Awesome\ 6 Free";
+    content: "\f00c";
+    font-weight: 900;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+// fix heights of sections to be === on lg devices
+@media (min-width: 992px) {
+  .gradient-side,
+  .white-side {
+    height: 45rem;
+  }
+}
+
+// form content
+.form {
+  padding: 3rem;
+
+  button {
+    border: none;
+    color: $white;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}
+
+.get-started h4 {
+  @include signatureFont;
+  text-transform: capitalize;
+}

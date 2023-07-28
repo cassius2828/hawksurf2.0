@@ -1,0 +1,30 @@
+
+//include this for styling to show up & variable be defined
+@use'../custom' as *;
+
+// gradient mixins
+
+@mixin gradient {
+background: linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95));
+}
+@mixin gradient2 {
+    background: linear-gradient(to right, rgba($primary, 1), rgba($secondary, 1));
+}
+
+// absolute center
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// transtion
+@mixin transitionProp {
+    transition: 0.5s ease-in-out;
+}
+
+// signature font
+@mixin signatureFont {
+    font-family: Goblin+One;
+}

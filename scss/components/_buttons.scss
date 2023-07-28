@@ -1,0 +1,88 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+// nav button + white phone
+
+.btn-rounded {
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
+  position: relative;
+  padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
+  font-weight: 700;
+  color: $secondary;
+//   margin: 0 4rem 0 0;
+  border: 0.1rem solid rgba($white, 0.6);
+
+  span {
+    position: absolute;
+    background-color: $primary;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+
+    i {
+      color: $white;
+      font-size: 1rem;
+      line-height: 2.5rem;
+    }
+
+    .fa-phone-alt {
+        color: $white;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        transform: rotate(105deg);
+      }
+  }
+  &:hover {
+    @include gradient;
+    color: $white;
+
+    span {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+
+
+@media (max-width: 1145px) {
+  .btn-rounded {
+    width: 12rem;
+    font-size: 0.6rem;
+  }
+}
+
+// second button + it's media queries
+
+#intro-btn {
+    font-size: 1rem;
+}
+
+@media (min-width: 1000px) {
+    #intro-btn {
+            font-size: 1rem;
+            position: absolute;
+            top: 28rem;
+        }
+    }
+@include media-breakpoint-up(xl) {
+  #intro-btn {
+    margin: 5rem 3rem;
+    transform: scale(1.5);
+  }
+}
+
+        // some media query that affects the hover and clickability of my get in touch btn
+        
+// learn more buttons in services section
+        @include media-breakpoint-up(md) {
+          .services button {
+            font-size: 1rem;
+          }
+        }

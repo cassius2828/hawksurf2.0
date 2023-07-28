@@ -1,0 +1,109 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.services {
+  position: relative;
+  padding: 1rem 0;
+
+  &__content {
+    padding: 1rem;
+    margin-top: 5rem;
+  }
+
+  &__pic {
+    max-width: 100%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .services {
+    margin: 0 auto;
+  }
+}
+
+// 3 services imgs
+@include media-breakpoint-up(md) {
+  .left-img {
+    position: relative;
+    left: -5rem;
+  }
+  .right-img {
+    position: relative;
+    left: -7rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .left-img {
+    position: relative;
+    left: -1rem;
+  }
+  .right-img {
+    position: relative;
+    left: -7rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .left-img {
+    position: relative;
+    left: 2rem;
+  }
+  .right-img {
+    position: relative;
+    left: -5rem;
+  }
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: $primary;
+}
+
+// images are getting messed up due to the general img selctor in media queires
+// img-fluid class does not apply since I changed the name
+// this is an entirely new class w/out img-fluid preset properties
+
+@include media-breakpoint-down(md) {
+  .img-fluid-2 {
+    width: 95%;
+    padding: 0;
+    margin: 1rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .services-img-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+@include media-breakpoint-up(md) {
+  .img-fluid-2 {
+    transform: scale(0.7);
+    justify-content: space-between;
+    margin: auto;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .img-fluid-2 {
+    transform: scale(1.05);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .grey-border {
+    border-right: 1px solid $gray-300;
+  }
+}
+// to give correct order of text+imgs on mobile devices
+@include media-breakpoint-down(md) {
+  .webdev-row {
+    flex-direction: column-reverse;
+  }
+  .services__content {
+    padding: 0;
+  }
+}

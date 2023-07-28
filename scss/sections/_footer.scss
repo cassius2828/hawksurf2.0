@@ -1,0 +1,142 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+* {
+  scroll-behavior: smooth;
+}
+
+.footer {
+  padding-top: 0.2rem;
+  margin: auto;
+  background-color: $footer;
+}
+
+// style contact box content
+
+.contact-box {
+  position: relative;
+
+  &__icon {
+    width: 2rem;
+    stroke: $primary;
+    padding-top: 0.5rem;
+    margin: auto;
+
+    @include media-breakpoint-up(sm) {
+      width: 4rem;
+    }
+  }
+
+  &__info {
+    padding: 0.4rem;
+    justify-content: space-between;
+
+    &--title {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      @include media-breakpoint-up(lg) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &--subtitle {
+      color: $gray-500;
+      text-decoration: none;
+      font-size: 0.8rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// a links
+footer a:hover {
+  color: $secondary;
+}
+
+// style social media content
+
+.sm-p {
+  font-size: 1.3rem;
+}
+.footer-sm {
+  a {
+    color: $white;
+
+    i {
+      font-size: 2rem;
+      margin: 2rem 1rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+.sm-icons {
+  transition: 0.2s ease-out;
+}
+.sm-icons:hover {
+  transform: scale(1.15);
+}
+
+// style company info
+
+.company-list {
+  display: block;
+  list-style: none;
+  position: relative;
+
+  a {
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: $white;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .three-cols {
+    height: 12rem;
+  }
+}
+
+// style copyright content
+
+.footer-bottom {
+  background-color: $black;
+  padding: 1px;
+  &__copyright {
+    color: $gray-600;
+    font-weight: 400;
+
+    a {
+      color: $gray-300;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+// style the "back to top" btn
+
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 99;
+  background-color: $primary;
+
+  i {
+    color: $white;
+    font-size: 1rem;
+    @include absoluteCenter;
+  }
+}

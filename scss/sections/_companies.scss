@@ -1,0 +1,72 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+#companies > .container {
+  position: relative;
+}
+
+.companies img {
+  transition: 0.3s ease-in-out;
+}
+
+.companies {
+  padding: 0 0 0 0;
+  &__logo-box {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    text-align: center;
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
+
+  .amazon:hover {
+    transform: scale(0.85);
+  }
+}
+
+.amazon {
+  position: relative;
+  top: 0.8rem;
+  transform: scale(0.75);
+}
+
+@include media-breakpoint-up(sm) {
+  .companies {
+    padding: 0 0 5rem 0;
+  }
+}
+
+.google {
+  position: relative;
+  top: 0.3rem;
+}
+
+@media (max-width: 991px) {
+  .companies img {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    object-fit: contain;
+  }
+}
+
+/* ".row" applies to much more than just the companies; 
+find new selector */
+.row {
+  align-items: flex-end;
+  margin: 15% auto;
+}
+// company logo's scaling
+@include media-breakpoint-up(md) {
+  .companies-row {
+    margin: 15% 3rem;
+    transform: scale(1.1);
+  }
+}
